@@ -27,16 +27,18 @@ let prezzoTratta = (numeroKm * prezzoKm);
  console.log(scontoOver);
  console.log(prezzoOver);
 
- //dichiaro che normalmente la var costoBiglietto è uguale a prezzoTratta
- //ma nel caso di alcune condizioni il suo valore cambia
+ //dichiaro la var costoBiglietto
+ //definisco le condizioni
 
-let costoBiglietto = prezzoTratta
+let costoBiglietto;
 
  if (età < 18) {
-    costoBiglietto = prezzoMinorenni
+    costoBiglietto = prezzoMinorenni 
  } else if (età > 65) {
     costoBiglietto = prezzoOver
- } else
+ } else {
+    costoBiglietto = prezzoTratta
+ }
 
 //inserisco il risultato all'interno dell'html
 
