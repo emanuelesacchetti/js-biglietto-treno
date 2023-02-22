@@ -41,10 +41,10 @@ let costoBiglietto;
 const fraseMinorenni = 'Le è stato applicato uno sconto del 20% in quanto ha meno di 18 anni';
 const fraseOver = 'Le è stato applicato uno sconto del 40% in quanto ha più di 65 anni';
 
- if (età < 18) {
+ if (eta < 18) {
     costoBiglietto = prezzoMinorenni;
     document.getElementById('why').innerHTML = fraseMinorenni; 
- } else if (età > 65) {
+ } else if (eta > 65) {
     costoBiglietto = prezzoOver;
     document.getElementById('why').innerHTML = fraseOver;
  } else {
@@ -53,6 +53,6 @@ const fraseOver = 'Le è stato applicato uno sconto del 40% in quanto ha più di
 
 //inserisco il risultato all'interno dell'html
 
- document.getElementById('biglietto').innerHTML = prezzoTratta.toFixed(2);
- document.getElementById('eta-utente').innerHTML = eta.toFixed(2);
- document.getElementById('km-utente').innerHTML = numeroKm.toFixed(2);
+ document.getElementById('biglietto').innerHTML = costoBiglietto.toFixed(2);
+ document.getElementById('eta-utente').innerHTML = eta;
+ document.getElementById('km-utente').innerHTML = numeroKm;
