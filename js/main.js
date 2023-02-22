@@ -9,6 +9,7 @@ const età = parseInt(prompt('Quanti anni hai?'));
 
 let prezzoKm = 0.21;
 let prezzoTratta = (numeroKm * prezzoKm);
+let prezzoTratta2 = prezzoTratta.toFixed(2)
 
  console.log(prezzoTratta);
 
@@ -17,15 +18,19 @@ let prezzoTratta = (numeroKm * prezzoKm);
 
  let scontoMinorenni = ((prezzoTratta * 20) / 100);
  let prezzoMinorenni = prezzoTratta - scontoMinorenni;
+ let prezzoMinorenni2 = prezzoMinorenni.toFixed(2);
 
  console.log(scontoMinorenni);
  console.log(prezzoMinorenni);
 
  let scontoOver = ((prezzoTratta * 40) / 100);
  let prezzoOver = prezzoTratta - scontoOver;
+ let prezzoOver2 = prezzoOver.toFixed(2);
+
 
  console.log(scontoOver);
  console.log(prezzoOver);
+ 
 
  //dichiaro la var costoBiglietto
  //definisco le condizioni
@@ -33,16 +38,16 @@ let prezzoTratta = (numeroKm * prezzoKm);
 let costoBiglietto;
 
  if (età < 18) {
-    costoBiglietto = prezzoMinorenni 
+    costoBiglietto = prezzoMinorenni2 
  } else if (età > 65) {
-    costoBiglietto = prezzoOver
+    costoBiglietto = prezzoOver2
  } else {
-    costoBiglietto = prezzoTratta
+    costoBiglietto = prezzoTratta2
  }
 
 
-const fraseMinorenni = 'Ti è stato applicato uno sconto del 20% in quanto minorenne';
-const fraseOver = 'Ti è stato applicato uno sconto del 40% in quanto over65';
+const fraseMinorenni = 'Le è stato applicato uno sconto del 20% in quanto ha meno di 18 anni';
+const fraseOver = 'Le è stato applicato uno sconto del 40% in quanto ha più di 65 anni';
 
 
  if (età < 18) {
